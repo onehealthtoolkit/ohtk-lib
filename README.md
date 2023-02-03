@@ -5,6 +5,8 @@ This is a library of standardized metadata for OHTK. These metadata files can be
 
 <img width="507" alt="Screen Shot 2023-02-03 at 4 38 56 PM" src="https://user-images.githubusercontent.com/1671334/216566480-8a227061-113c-44c6-902f-42ecf5f71029.png">
 
+* *IMPORTANT: the categoryName MUST correspond exactly to an existing categoryName in the environment you are importing into!*
+
 ### Standard Report Types
 **Animal Health**
  - *Animal Illness or Death* | Available languages: 🇺🇸🇹🇭
