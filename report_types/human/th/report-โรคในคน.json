@@ -1,0 +1,254 @@
+{
+  "id": "214c52af-1075-4b40-8ed7-f6ec4392c742",
+  "name": "โรคในคน",
+  "definition": {
+    "sections": [
+      {
+        "label": "Page 1",
+        "questions": [
+          {
+            "label": "จำนวนผู้ป่วย",
+            "fields": [
+              {
+                "id": "no_sickness",
+                "min": 1,
+                "name": "no_sickness",
+                "type": "integer",
+                "label": "",
+                "required": false
+              }
+            ],
+            "description": ""
+          },
+          {
+            "label": "ชื่อสถานที่ที่พบผู้ป่วย",
+            "fields": [
+              {
+                "id": "name_location",
+                "name": "name_location",
+                "type": "text",
+                "label": "",
+                "required": true
+              }
+            ],
+            "description": ""
+          }
+        ]
+      },
+      {
+        "label": "Page 2",
+        "questions": [
+          {
+            "label": "อาการระบบทางเดินอาหาร",
+            "fields": [
+              {
+                "id": "digestive_system",
+                "name": "digestive_system",
+                "type": "multiplechoices",
+                "label": "",
+                "options": [
+                  {
+                    "label": "ท้องเสีย",
+                    "value": "ท้องเสีย"
+                  },
+                  {
+                    "label": "คลื่นไส้/อาเจียน",
+                    "value": "คลื่นไส้/อาเจียน"
+                  },
+                  {
+                    "label": "ปวดท้อง",
+                    "value": "ปวดท้อง"
+                  },
+                  {
+                    "label": "อื่นๆ (ระบุ)",
+                    "value": "อื่นๆ (ระบุ)",
+                    "textInput": true
+                  }
+                ],
+                "required": false
+              }
+            ],
+            "description": ""
+          },
+          {
+            "label": "อาการระบบทางเดินหายใจ",
+            "fields": [
+              {
+                "id": "respiratory_system",
+                "name": "respiratory_system",
+                "type": "multiplechoices",
+                "label": "",
+                "options": [
+                  {
+                    "label": "มีไข้",
+                    "value": "มีไข้"
+                  },
+                  {
+                    "label": "ไอ",
+                    "value": "ไอ"
+                  },
+                  {
+                    "label": "เจ็บคอ",
+                    "value": "เจ็บคอ"
+                  },
+                  {
+                    "label": "มีเสมหะ",
+                    "value": "มีเสมหะ"
+                  },
+                  {
+                    "label": "หายใจเหนื่อยหอบ",
+                    "value": "หายใจเหนื่อยหอบ"
+                  },
+                  {
+                    "label": "อื่นๆ (ระบุ)",
+                    "value": "อื่นๆ (ระบุ)",
+                    "textInput": true
+                  }
+                ],
+                "required": false
+              }
+            ],
+            "description": ""
+          },
+          {
+            "label": "อาการไข้ ผื่น ตุ่ม",
+            "fields": [
+              {
+                "id": "fever_skin_system",
+                "name": "fever_skin_system",
+                "type": "multiplechoices",
+                "label": "",
+                "options": [
+                  {
+                    "label": "มีไข้ร่วมกับผื่นนูนแดง",
+                    "value": "มีไข้ร่วมกับผื่นนูนแดง"
+                  },
+                  {
+                    "label": "มีไข้ร่วมกับจุดแดง",
+                    "value": "มีไข้ร่วมกับจุดแดง"
+                  },
+                  {
+                    "label": "มีไข้ร่วมกับตุ่ม",
+                    "value": "มีไข้ร่วมกับตุ่ม"
+                  },
+                  {
+                    "label": "อื่นๆ (ระบุ)",
+                    "value": "อื่นๆ (ระบุ)",
+                    "textInput": true
+                  }
+                ],
+                "required": false
+              }
+            ],
+            "description": ""
+          },
+          {
+            "label": "อาการอื่นๆ",
+            "fields": [
+              {
+                "id": "other_symptom",
+                "name": "other_symptom",
+                "type": "text",
+                "label": "",
+                "required": false
+              }
+            ],
+            "description": ""
+          },
+          {
+            "label": "โรคที่สงสัยว่าป่วย",
+            "fields": [
+              {
+                "id": "sickness_suspected",
+                "name": "sickness_suspected",
+                "type": "singlechoices",
+                "label": "",
+                "options": [
+                  {
+                    "label": "ไข้หวัดใหญ่",
+                    "value": "ไข้หวัดใหญ่"
+                  },
+                  {
+                    "label": "ไข้เลือดออก",
+                    "value": "ไข้เลือดออก"
+                  },
+                  {
+                    "label": "อาหารเป็นพิษ",
+                    "value": "อาหารเป็นพิษ"
+                  },
+                  {
+                    "label": "โรคมือ เท้า ปาก",
+                    "value": "โรคมือ เท้า ปาก"
+                  },
+                  {
+                    "label": "ไม่ทราบ/ไม่แน่ใจ",
+                    "value": "ไม่ทราบ/ไม่แน่ใจ"
+                  }
+                ],
+                "required": true
+              }
+            ],
+            "description": ""
+          }
+        ]
+      },
+      {
+        "label": "Page 3",
+        "questions": [
+          {
+            "label": "ภาพถ่าย",
+            "fields": [
+              {
+                "id": "images",
+                "name": "images",
+                "type": "images",
+                "label": "",
+                "required": false
+              }
+            ],
+            "description": ""
+          },
+          {
+            "label": "วันที่เริ่มป่วย",
+            "fields": [
+              {
+                "id": "sickness_date",
+                "name": "sickness_date",
+                "type": "date",
+                "label": "",
+                "required": true,
+                "withTime": false,
+                "separatedFields": true
+              }
+            ],
+            "description": ""
+          },
+          {
+            "label": "วันที่รายงาน",
+            "fields": [
+              {
+                "id": "report_date",
+                "name": "report_date",
+                "tags": "incident_date",
+                "type": "date",
+                "label": "",
+                "required": true,
+                "withTime": false,
+                "separatedFields": true
+              }
+            ],
+            "description": ""
+          }
+        ]
+      }
+    ]
+  },
+  "categoryName": "สุขภาพคน",
+  "stateDefinitionName": "default case status",
+  "ordering": 1,
+  "rendererDataTemplate": "รายงานโรคในคน : พบผู้ป่วยจำนวน {{ data.no_sickness__value }} คน ที่{{ data.name_location__value }} สงสัยว่าป่วยเป็น{{ data.sickness_suspected__value }} เริ่มมีอาการป่วยวันที่ {{ data.sickness_date__value }} มีการรายงานวันที่ {{ data.report_date__value }}",
+  "followupDefinition": {
+    "sections": []
+  },
+  "rendererFollowupDataTemplate": ""
+}

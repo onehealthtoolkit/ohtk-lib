@@ -1,0 +1,80 @@
+{
+  "id": "dcdd64c3-27f0-4b00-9c57-2242c8f151e2",
+  "name": "ปัญหาสิ่งแวดล้อม",
+  "definition": {
+    "sections": [
+      {
+        "label": "",
+        "questions": [
+          {
+            "label": "ปัญหาสิ่งแวดล้อม",
+            "fields": [
+              {
+                "id": "type_environment_problem",
+                "name": "type_environment_problem",
+                "type": "singlechoices",
+                "label": "ปัญหาที่พบ",
+                "options": [
+                  {
+                    "label": "เสียงดัง",
+                    "value": "เสียงดัง"
+                  },
+                  {
+                    "label": "กลิ่นเหม็น",
+                    "value": "กลิ่นเหม็น"
+                  },
+                  {
+                    "label": "ควัน",
+                    "value": "ควัน"
+                  },
+                  {
+                    "label": "น้ำเสีย",
+                    "value": "น้ำเสีย"
+                  },
+                  {
+                    "label": "ขยะ",
+                    "value": "ขยะ"
+                  }
+                ],
+                "required": true
+              },
+              {
+                "id": "location_environment_problem",
+                "name": "location_environment_problem",
+                "type": "text",
+                "label": "สถานที่ที่พบ",
+                "required": true
+              },
+              {
+                "id": "image_environment",
+                "name": "image_environment",
+                "type": "images",
+                "label": "",
+                "required": false
+              },
+              {
+                "id": "report_date",
+                "name": "report_date",
+                "tags": "incident_date",
+                "type": "date",
+                "label": "วันที่รายงาน",
+                "required": true,
+                "withTime": false,
+                "separatedFields": true
+              }
+            ],
+            "description": ""
+          }
+        ]
+      }
+    ]
+  },
+  "categoryName": "สิ่งแวดล้อม",
+  "stateDefinitionName": "default case status",
+  "ordering": 1,
+  "rendererDataTemplate": "รายงานปัญหาสิ่งแวดล้อม : พบ{{ data.type_environment_problem__value }} ที่{{ data.location_environment_problem__value }} วันที่ {{ data.report_date__value }}",
+  "followupDefinition": {
+    "sections": []
+  },
+  "rendererFollowupDataTemplate": ""
+}

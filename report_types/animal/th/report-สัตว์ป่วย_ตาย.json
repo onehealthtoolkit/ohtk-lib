@@ -1,0 +1,2094 @@
+{
+  "id": "b82b5907-54da-40b4-91e4-ebbd55b25de7",
+  "name": "สัตว์ป่วย/ตาย",
+  "definition": {
+    "sections": [
+      {
+        "label": "ชนิดและอายุสัตว์",
+        "questions": [
+          {
+            "label": "ประเภทสัตว์",
+            "fields": [
+              {
+                "id": "animal_type",
+                "name": "animal_type",
+                "type": "singlechoices",
+                "label": "",
+                "options": [
+                  {
+                    "label": "ไก่ เป็ด นก",
+                    "value": "ไก่ เป็ด นก"
+                  },
+                  {
+                    "label": "สุนัข แมว",
+                    "value": "สุนัข แมว"
+                  },
+                  {
+                    "label": "หมู โค ควาย แพะ แกะ",
+                    "value": "หมู โค ควาย แพะ แกะ"
+                  }
+                ],
+                "required": true
+              }
+            ],
+            "description": ""
+          },
+          {
+            "label": "ชนิดสัตว์",
+            "fields": [
+              {
+                "id": "poultry_type",
+                "name": "poultry_type",
+                "type": "singlechoices",
+                "label": "",
+                "options": [
+                  {
+                    "label": "ไก่พื้นเมือง",
+                    "value": "ไก่พื้นเมือง"
+                  },
+                  {
+                    "label": "ไก่เนื้อ",
+                    "value": "ไก่เนื้อ"
+                  },
+                  {
+                    "label": "ไก่ไข่",
+                    "value": "ไก่ไข่"
+                  },
+                  {
+                    "label": "เป็ดเนื้อ",
+                    "value": "เป็ดเนื้อ"
+                  },
+                  {
+                    "label": "เป็ดไข่",
+                    "value": "เป็ดไข่"
+                  },
+                  {
+                    "label": "นก",
+                    "value": "นก"
+                  }
+                ],
+                "required": true
+              }
+            ],
+            "condition": {
+              "name": "animal_type",
+              "value": "ไก่ เป็ด นก",
+              "operator": "="
+            },
+            "description": "สัตว์ปีก"
+          },
+          {
+            "label": "ชนิดสัตว์",
+            "fields": [
+              {
+                "id": "carnivora_type",
+                "name": "carnivora_type",
+                "type": "singlechoices",
+                "label": "",
+                "options": [
+                  {
+                    "label": "สุนัข",
+                    "value": "สุนัข"
+                  },
+                  {
+                    "label": "แมว",
+                    "value": "แมว"
+                  }
+                ],
+                "required": true
+              }
+            ],
+            "condition": {
+              "name": "animal_type",
+              "value": "สุนัข แมว",
+              "operator": "="
+            },
+            "description": "สุนัข แมว"
+          },
+          {
+            "label": "ชนิดสัตว์",
+            "fields": [
+              {
+                "id": "ruminant_swine_type",
+                "name": "ruminant_swine_type",
+                "type": "singlechoices",
+                "label": "",
+                "options": [
+                  {
+                    "label": "หมู",
+                    "value": "หมู"
+                  },
+                  {
+                    "label": "โคเนื้อ",
+                    "value": "โคเนื้อ"
+                  },
+                  {
+                    "label": "โคนม",
+                    "value": "โคนม"
+                  },
+                  {
+                    "label": "ควาย",
+                    "value": "ควาย"
+                  },
+                  {
+                    "label": "แพะ",
+                    "value": "แพะ"
+                  },
+                  {
+                    "label": "แกะ",
+                    "value": "แกะ"
+                  }
+                ],
+                "required": true
+              }
+            ],
+            "condition": {
+              "name": "animal_type",
+              "value": "หมู โค ควาย แพะ แกะ",
+              "operator": "="
+            },
+            "description": "สัตว์กระเพาะรวม + หมู"
+          },
+          {
+            "label": "อายุสัตว์ป่วย/ตาย",
+            "fields": [
+              {
+                "id": "age_of_animal",
+                "name": "age_of_animal",
+                "type": "multiplechoices",
+                "label": "",
+                "options": [
+                  {
+                    "label": "ระยะแรกเกิด",
+                    "value": "ระยะแรกเกิด"
+                  },
+                  {
+                    "label": "ระยะรุ่น",
+                    "value": "ระยะรุ่น"
+                  },
+                  {
+                    "label": "ระยะพ่อแม่พันธุ์",
+                    "value": "ระยะพ่อแม่พันธุ์"
+                  }
+                ],
+                "required": true
+              }
+            ],
+            "description": ""
+          }
+        ]
+      },
+      {
+        "label": "จำนวน",
+        "questions": [
+          {
+            "label": "จำนวนสัตว์ป่วย",
+            "fields": [
+              {
+                "id": "no_of_illness",
+                "min": 0,
+                "name": "no_of_illness",
+                "type": "integer",
+                "label": "",
+                "required": false
+              }
+            ],
+            "description": ""
+          },
+          {
+            "label": "จำนวนสัตว์ตายในเล้า/คอก",
+            "fields": [
+              {
+                "id": "no_of_death",
+                "min": 0,
+                "name": "no_of_death",
+                "type": "integer",
+                "label": "",
+                "required": false
+              }
+            ],
+            "description": ""
+          },
+          {
+            "label": "จำนวนสัตว์ทั้งหมด",
+            "fields": [
+              {
+                "id": "total_of_animal",
+                "min": 1,
+                "name": "total_of_animal",
+                "type": "integer",
+                "label": "",
+                "required": false
+              }
+            ],
+            "description": ""
+          },
+          {
+            "label": "จำนวนเล้าใกล้เคียงที่มีอาการ",
+            "fields": [
+              {
+                "id": "no_of_nearby",
+                "name": "no_of_nearby",
+                "type": "integer",
+                "label": "",
+                "required": false
+              }
+            ],
+            "description": ""
+          }
+        ]
+      },
+      {
+        "label": "โรค",
+        "questions": [
+          {
+            "label": "โรค",
+            "fields": [
+              {
+                "id": "poultry_disease",
+                "name": "poultry_disease",
+                "type": "singlechoices",
+                "label": "",
+                "options": [
+                  {
+                    "label": "ห่าไก่",
+                    "value": "ห่าไก่"
+                  },
+                  {
+                    "label": "ฝีดาษ",
+                    "value": "ฝีดาษ"
+                  },
+                  {
+                    "label": "หวัด",
+                    "value": "หวัด"
+                  },
+                  {
+                    "label": "ระบุอาการ",
+                    "value": "ระบุอาการ"
+                  }
+                ],
+                "required": true
+              }
+            ],
+            "condition": {
+              "name": "animal_type",
+              "value": "ไก่ เป็ด นก",
+              "operator": "="
+            },
+            "description": "สัตว์ปีก"
+          },
+          {
+            "label": "โรค",
+            "fields": [
+              {
+                "id": "dog_disease",
+                "name": "dog_disease",
+                "type": "singlechoices",
+                "label": "",
+                "options": [
+                  {
+                    "label": "พิษสุนัขบ้า",
+                    "value": "พิษสุนัขบ้า"
+                  },
+                  {
+                    "label": "หัดสุนัข",
+                    "value": "หัดสุนัข"
+                  },
+                  {
+                    "label": "ลำไส้อักเสบ",
+                    "value": "ลำไส้อักเสบ"
+                  },
+                  {
+                    "label": "ระบุอาการ",
+                    "value": "ระบุอาการ"
+                  }
+                ],
+                "required": true
+              }
+            ],
+            "condition": {
+              "name": "carnivora_type",
+              "value": "สุนัข",
+              "operator": "="
+            },
+            "description": "สุนัข"
+          },
+          {
+            "label": "โรค",
+            "fields": [
+              {
+                "id": "cat_disease",
+                "name": "cat_disease",
+                "type": "singlechoices",
+                "label": "",
+                "options": [
+                  {
+                    "label": "พิษสุนัขบ้า",
+                    "value": "พิษสุนัขบ้า"
+                  },
+                  {
+                    "label": "หัดแมว",
+                    "value": "หัดแมว"
+                  },
+                  {
+                    "label": "ระบุอาการ",
+                    "value": "ระบุอาการ"
+                  }
+                ],
+                "required": true
+              }
+            ],
+            "condition": {
+              "name": "carnivora_type",
+              "value": "แมว",
+              "operator": "="
+            },
+            "description": "แมว"
+          },
+          {
+            "label": "โรค",
+            "fields": [
+              {
+                "id": "swine_disease",
+                "name": "swine_disease",
+                "type": "singlechoices",
+                "label": "",
+                "options": [
+                  {
+                    "label": "ปากและเท้าเปื่อย",
+                    "value": "ปากและเท้าเปื่อย"
+                  },
+                  {
+                    "label": "หวัด",
+                    "value": "หวัด"
+                  },
+                  {
+                    "label": "อหิวาต์",
+                    "value": "อหิวาต์"
+                  },
+                  {
+                    "label": "ระบุอาการ",
+                    "value": "ระบุอาการ"
+                  }
+                ],
+                "required": true
+              }
+            ],
+            "condition": {
+              "name": "ruminant_swine_type",
+              "value": "หมู",
+              "operator": "="
+            },
+            "description": "หมู"
+          },
+          {
+            "label": "โรค",
+            "fields": [
+              {
+                "id": "ruminant_disease",
+                "name": "ruminant_disease",
+                "type": "singlechoices",
+                "label": "",
+                "options": [
+                  {
+                    "label": "กาลี/แอนแทรกซ์",
+                    "value": "กาลี/แอนแทรกซ์"
+                  },
+                  {
+                    "label": "ปากและเท้าเปื่อย",
+                    "value": "ปากและเท้าเปื่อย"
+                  },
+                  {
+                    "label": "ไข้ขาดำ",
+                    "value": "ไข้ขาดำ"
+                  },
+                  {
+                    "label": "วัณโรค",
+                    "value": "วัณโรค"
+                  },
+                  {
+                    "label": "คอบวม",
+                    "value": "คอบวม"
+                  },
+                  {
+                    "label": "ระบุอาการ",
+                    "value": "ระบุอาการ"
+                  }
+                ],
+                "required": true
+              }
+            ],
+            "condition": {
+              "name": "ruminant_swine_type",
+              "value": "หมู",
+              "operator": "!="
+            },
+            "description": "โคเนื้อ โคนม ควาย แพะ แกะ"
+          }
+        ]
+      },
+      {
+        "label": "อาการ",
+        "questions": [
+          {
+            "label": "อาการโรค",
+            "fields": [
+              {
+                "id": "chicken_heck_disease",
+                "name": "chicken_heck_disease",
+                "type": "multiplechoices",
+                "label": "โรคห่าไก่",
+                "options": [
+                  {
+                    "label": "ป่วยตายเฉียบพลัน",
+                    "value": "ป่วยตายเฉียบพลัน"
+                  },
+                  {
+                    "label": "แพร่ระบาดรวดเร็ว",
+                    "value": "แพร่ระบาดรวดเร็ว"
+                  }
+                ],
+                "required": true,
+                "condition": {
+                  "name": "poultry_disease",
+                  "value": "ห่าไก่",
+                  "operator": "="
+                }
+              },
+              {
+                "id": "chickenpox",
+                "name": "chickenpox",
+                "type": "multiplechoices",
+                "label": "โรคฝีดาษ",
+                "options": [
+                  {
+                    "label": "มีตุ่มหนอง",
+                    "value": "มีตุ่มหนอง"
+                  },
+                  {
+                    "label": "ตุ่มดำ บนใบหน้า",
+                    "value": "ตุ่มดำ บนใบหน้า"
+                  }
+                ],
+                "required": true,
+                "condition": {
+                  "name": "poultry_disease",
+                  "value": "ฝีดาษ",
+                  "operator": "="
+                }
+              },
+              {
+                "id": "chickenflu",
+                "name": "chickenflu",
+                "type": "multiplechoices",
+                "label": "โรคหวัด",
+                "options": [
+                  {
+                    "label": "ไอ จาม",
+                    "value": "ไอ จาม"
+                  },
+                  {
+                    "label": "น้ำมูกไหล",
+                    "value": "น้ำมูกไหล"
+                  },
+                  {
+                    "label": "หายใจเสียงดัง",
+                    "value": "หายใจเสียงดัง"
+                  },
+                  {
+                    "label": "หายใจลำบาก/อ้าปากหายใจ",
+                    "value": "หายใจลำบาก/อ้าปากหายใจ"
+                  }
+                ],
+                "required": true,
+                "condition": {
+                  "name": "poultry_disease",
+                  "value": "หวัด",
+                  "operator": "="
+                }
+              }
+            ],
+            "condition": {
+              "name": "poultry_disease",
+              "value": "ระบุอาการ",
+              "operator": "!="
+            },
+            "description": "สัตว์ปีก"
+          },
+          {
+            "label": "ระบุอาการ",
+            "fields": [
+              {
+                "id": "poultry_gastrointestinal_symptoms",
+                "name": "poultry_gastrointestinal_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบทางเดินอาหาร",
+                "options": [
+                  {
+                    "label": "ท้องเสีย",
+                    "value": "ท้องเสีย"
+                  },
+                  {
+                    "label": "ทวารหนักเปื้อน",
+                    "value": "ทวารหนักเปื้อน"
+                  },
+                  {
+                    "label": "ขี้ขาว",
+                    "value": "ขี้ขาว"
+                  },
+                  {
+                    "label": "ขี้เหลวมีเลือดปน",
+                    "value": "ขี้เหลวมีเลือดปน"
+                  },
+                  {
+                    "label": "มีแผลในปาก",
+                    "value": "มีแผลในปาก"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "poultry_skin_symptoms",
+                "name": "poultry_skin_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบผิวหนัง",
+                "options": [
+                  {
+                    "label": "มีตุ่มหนอง,ตุ่มดำ",
+                    "value": "มีตุ่มหนอง,ตุ่มดำ"
+                  },
+                  {
+                    "label": "ตาบวมปิด",
+                    "value": "ตาบวมปิด"
+                  },
+                  {
+                    "label": "ตาลึกจม",
+                    "value": "ตาลึกจม"
+                  },
+                  {
+                    "label": "ขนร่วง",
+                    "value": "ขนร่วง"
+                  },
+                  {
+                    "label": "หน้าบวม",
+                    "value": "หน้าบวม"
+                  },
+                  {
+                    "label": "หงอนเหนียง/แข้งมีสีม่วง",
+                    "value": "หงอนเหนียง/แข้งมีสีม่วง"
+                  },
+                  {
+                    "label": "มีจุด/ปื้นเลือดออกใต้ผิวหนัง",
+                    "value": "มีจุด/ปื้นเลือดออกใต้ผิวหนัง"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "poultry_respiratory_symptoms",
+                "name": "poultry_respiratory_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบทางเดินหายใจ",
+                "options": [
+                  {
+                    "label": "ไอ จาม",
+                    "value": "ไอ จาม"
+                  },
+                  {
+                    "label": "น้ำมูกไหล",
+                    "value": "น้ำมูกไหล"
+                  },
+                  {
+                    "label": "หายใจเสียงดัง",
+                    "value": "หายใจเสียงดัง"
+                  },
+                  {
+                    "label": "อ้าปากหายใจ",
+                    "value": "อ้าปากหายใจ"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "poultry_reproductive_symptoms",
+                "name": "poultry_reproductive_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบสืบพันธุ์",
+                "options": [
+                  {
+                    "label": "ไข่ลดลง",
+                    "value": "ไข่ลดลง"
+                  },
+                  {
+                    "label": "ไข่รูปร่างผิดปกติ",
+                    "value": "ไข่รูปร่างผิดปกติ"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "poultry_nervous_symptoms",
+                "name": "poultry_nervous_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบประสาท",
+                "options": [
+                  {
+                    "label": "ชัก",
+                    "value": "ชัก"
+                  },
+                  {
+                    "label": "คอบิด",
+                    "value": "คอบิด"
+                  },
+                  {
+                    "label": "ขาเกร็ง",
+                    "value": "ขาเกร็ง"
+                  },
+                  {
+                    "label": "อัมพาต",
+                    "value": "อัมพาต"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "poultry_general_symptoms",
+                "name": "poultry_general_symptoms",
+                "type": "multiplechoices",
+                "label": "อาการทั่วไป",
+                "options": [
+                  {
+                    "label": "ตายเฉียบพลัน",
+                    "value": "ตายเฉียบพลัน"
+                  },
+                  {
+                    "label": "ลุกไม่ขึ้น",
+                    "value": "ลุกไม่ขึ้น"
+                  },
+                  {
+                    "label": "ซึม/เหงา/ไม่กินอาหาร",
+                    "value": "ซึม/เหงา/ไม่กินอาหาร"
+                  },
+                  {
+                    "label": "ตาแดง/มีน้ำตา",
+                    "value": "ตาแดง/มีน้ำตา"
+                  },
+                  {
+                    "label": "ผอม",
+                    "value": "ผอม"
+                  },
+                  {
+                    "label": "แคระแกร็น",
+                    "value": "แคระแกร็น"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "poultry_others_symptoms",
+                "name": "poultry_others_symptoms",
+                "type": "text",
+                "label": "อาการอื่นๆ",
+                "required": false
+              }
+            ],
+            "condition": {
+              "name": "poultry_disease",
+              "value": "ระบุอาการ",
+              "operator": "="
+            },
+            "description": "สัตว์ปีก"
+          },
+          {
+            "label": "อาการโรค",
+            "fields": [
+              {
+                "id": "dog_rabies_symptoms",
+                "name": "dog_rabies_symptoms",
+                "type": "multiplechoices",
+                "label": "โรคพิษสุนัขบ้า",
+                "options": [
+                  {
+                    "label": "กัด ดุร้าย",
+                    "value": "กัด ดุร้าย"
+                  },
+                  {
+                    "label": "กลืนไม่ได้",
+                    "value": "กลืนไม่ได้"
+                  },
+                  {
+                    "label": "เสียการทรงตัว",
+                    "value": "เสียการทรงตัว"
+                  }
+                ],
+                "required": true,
+                "condition": {
+                  "name": "dog_disease",
+                  "value": "พิษสุนัขบ้า",
+                  "operator": "="
+                }
+              },
+              {
+                "id": "dog_canine_distemper_symptoms",
+                "name": "dog_canine_distemper_symptoms",
+                "type": "multiplechoices",
+                "label": "โรคหัดสุนัข",
+                "options": [
+                  {
+                    "label": "ตาแฉะ",
+                    "value": "ตาแฉะ"
+                  },
+                  {
+                    "label": "ตุ่มหนองที่ท้อง",
+                    "value": "ตุ่มหนองที่ท้อง"
+                  },
+                  {
+                    "label": "ชักกระตุก",
+                    "value": "ชักกระตุก"
+                  }
+                ],
+                "required": true,
+                "condition": {
+                  "name": "dog_disease",
+                  "value": "หัดสุนัข",
+                  "operator": "="
+                }
+              },
+              {
+                "id": "dog_canine_parvo_virus_symptoms",
+                "name": "dog_canine_parvo_virus_symptoms",
+                "type": "multiplechoices",
+                "label": "โรคลำไส้อักเสบ",
+                "options": [
+                  {
+                    "label": "อาเจียน",
+                    "value": "อาเจียน"
+                  },
+                  {
+                    "label": "ถ่ายเป็นเลือดมีกลิ่นคาว",
+                    "value": "ถ่ายเป็นเลือดมีกลิ่นคาว"
+                  }
+                ],
+                "required": true,
+                "condition": {
+                  "name": "dog_disease",
+                  "value": "ลำไส้อักเสบ",
+                  "operator": "="
+                }
+              }
+            ],
+            "condition": {
+              "name": "dog_disease",
+              "value": "ระบุอาการ",
+              "operator": "!="
+            },
+            "description": "สุนัข"
+          },
+          {
+            "label": "ระบุอาการ",
+            "fields": [
+              {
+                "id": "dog_gastrointestinal_symptoms",
+                "name": "dog_gastrointestinal_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบทางเดินอาหาร",
+                "options": [
+                  {
+                    "label": "ท้องเสีย",
+                    "value": "ท้องเสีย"
+                  },
+                  {
+                    "label": "อาเจียน",
+                    "value": "อาเจียน"
+                  },
+                  {
+                    "label": "ขี้มีเลือดปน",
+                    "value": "ขี้มีเลือดปน"
+                  },
+                  {
+                    "label": "ขี้มีกลิ่นเหม็นคาว",
+                    "value": "ขี้มีกลิ่นคาว"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "dog_skin_symptoms",
+                "name": "dog_skin_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบผิวหนัง",
+                "options": [
+                  {
+                    "label": "ตาแฉะ/ขี้ตาเกรอะ",
+                    "value": "ตาแฉะ/ขี้ตาเกรอะ"
+                  },
+                  {
+                    "label": "ขนหยอง",
+                    "value": "ขนหยอง"
+                  },
+                  {
+                    "label": "ขนร่วง",
+                    "value": "ขนร่วง"
+                  },
+                  {
+                    "label": "เกิดผื่นแดง",
+                    "value": "เกิดผื่นแดง"
+                  },
+                  {
+                    "label": "ใต้ท้องมีตุ่มหนอง",
+                    "value": "ใต้ท้องมีตุ่มหนอง"
+                  },
+                  {
+                    "label": "มีจุด/ปื้นเลือดออกใต้ผิวหนัง",
+                    "value": "มีจุด/ปื้นเลือดออกใต้ผิวหนัง"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "dog_respiratory_symptoms",
+                "name": "dog_respiratory_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบทางเดินหายใจ",
+                "options": [
+                  {
+                    "label": "ไอ จาม",
+                    "value": "ไอ จาม"
+                  },
+                  {
+                    "label": "น้ำมูกไหล",
+                    "value": "น้ำมูกไหล"
+                  },
+                  {
+                    "label": "หายใจเสียงดัง",
+                    "value": "หายใจเสียงดัง"
+                  },
+                  {
+                    "label": "หายใจลำบาก",
+                    "value": "หายใจลำบาก"
+                  },
+                  {
+                    "label": "เลือดออกจมูก",
+                    "value": "เลือดออกจมูก"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "dog_reproductive_symptoms",
+                "name": "dog_reproductive_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบสืบพันธุ์",
+                "options": [
+                  {
+                    "label": "แท้งลูก",
+                    "value": "แท้งลูก"
+                  },
+                  {
+                    "label": "ลูกตายแรกคลอด",
+                    "value": "ลูกตายแรกคลอด"
+                  },
+                  {
+                    "label": "อัณฑะบวม",
+                    "value": "อัณฑะบวม"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "dog_nervous_symptoms",
+                "name": "dog_nervous_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบประสาท",
+                "options": [
+                  {
+                    "label": "เดินเซ/เดินปัด",
+                    "value": "เดินเซ/เดินปัด"
+                  },
+                  {
+                    "label": "กัด/ดุร้ายผิดปกติ",
+                    "value": "กัด/ดุร้ายผิดปกติ"
+                  },
+                  {
+                    "label": "กลืนน้ำลายลำบาก/น้ำลายฟูมปาก",
+                    "value": "กลืนน้ำลายลำบาก/น้ำลายฟูมปาก"
+                  },
+                  {
+                    "label": "หวาดระแวง/ตกใจง่าย/ไวต่อสิ่งเร้า",
+                    "value": "หวาดระแวง/ตกใจง่าย/ไวต่อสิ่งเร้า"
+                  },
+                  {
+                    "label": "ดุร้ายผิดวิสัย",
+                    "value": "ดุร้ายผิดวิสัย"
+                  },
+                  {
+                    "label": "หอนมีเสียงแหบ",
+                    "value": "หอนมีเสียงแหบ"
+                  },
+                  {
+                    "label": "ซึม",
+                    "value": "ซึม"
+                  },
+                  {
+                    "label": "ชัก",
+                    "value": "ชัก"
+                  },
+                  {
+                    "label": "ไม่กินอาหาร",
+                    "value": "ไม่กินอาหาร"
+                  },
+                  {
+                    "label": "หลบตามที่มืด",
+                    "value": "หลบตามที่มืด"
+                  },
+                  {
+                    "label": "มีคนถูกกัด/เลีย/ข่วน",
+                    "value": "มีคนถูกกัด/เลีย/ข่วน"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "dog_general_symptoms",
+                "name": "dog_general_symptoms",
+                "type": "multiplechoices",
+                "label": "อาการทั่วไป",
+                "options": [
+                  {
+                    "label": "ตายเฉียบพลัน",
+                    "value": "ตายเฉียบพลัน"
+                  },
+                  {
+                    "label": "ลุกไม่ขึ้น",
+                    "value": "ลุกไม่ขึ้น"
+                  },
+                  {
+                    "label": "ไข้สูง/ซึม/ไม่กินอาหาร",
+                    "value": "ไข้สูง/ซึม/ไม่กินอาหาร"
+                  },
+                  {
+                    "label": "ซูบผอม",
+                    "value": "ซูบผอม"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "dog_others_symptoms",
+                "name": "dog_others_symptoms",
+                "type": "text",
+                "label": "อาการอื่นๆ",
+                "required": false
+              }
+            ],
+            "condition": {
+              "name": "dog_disease",
+              "value": "ระบุอาการ",
+              "operator": "="
+            },
+            "description": "สุนัข"
+          },
+          {
+            "label": "อาการโรค",
+            "fields": [
+              {
+                "id": "cat_rabies_symptoms",
+                "name": "cat_rabies_symptoms",
+                "type": "multiplechoices",
+                "label": "โรคพิษสุนัขบ้า",
+                "options": [
+                  {
+                    "label": "กัด ดุร้าย",
+                    "value": "กัด ดุร้าย"
+                  },
+                  {
+                    "label": "กลืนไม่ได้",
+                    "value": "กลืนไม่ได้"
+                  },
+                  {
+                    "label": "เสียการทรงตัว",
+                    "value": "เสียการทรงตัว"
+                  }
+                ],
+                "required": true,
+                "condition": {
+                  "name": "cat_disease",
+                  "value": "พิษสุนัขบ้า",
+                  "operator": "="
+                }
+              },
+              {
+                "id": "cat_canine_distemper_symptoms",
+                "name": "cat_canine_distemper_symptoms",
+                "type": "multiplechoices",
+                "label": "โรคหัดแมว",
+                "options": [
+                  {
+                    "label": "ตาแฉะ",
+                    "value": "ตาแฉะ"
+                  },
+                  {
+                    "label": "ท้องเสีย",
+                    "value": "ท้องเสีย"
+                  }
+                ],
+                "required": true,
+                "condition": {
+                  "name": "cat_disease",
+                  "value": "หัดแมว",
+                  "operator": "="
+                }
+              }
+            ],
+            "condition": {
+              "name": "cat_disease",
+              "value": "พิษสุนัขบ้า, หัดแมว",
+              "operator": "has_one_of"
+            },
+            "description": "แมว"
+          },
+          {
+            "label": "ระบุอาการ",
+            "fields": [
+              {
+                "id": "cat_gastrointestinal_symptoms",
+                "name": "cat_gastrointestinal_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบทางเดินอาหาร",
+                "options": [
+                  {
+                    "label": "ท้องเสีย",
+                    "value": "ท้องเสีย"
+                  },
+                  {
+                    "label": "อาเจียน",
+                    "value": "อาเจียน"
+                  },
+                  {
+                    "label": "ขี้มีเลือดปน",
+                    "value": "ขี้มีเลือดปน"
+                  },
+                  {
+                    "label": "ขี้มีกลิ่นเหม็นคาว",
+                    "value": "ขี้มีกลิ่นเหม็นคาว"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "cat_skin_symptoms",
+                "name": "cat_skin_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบผิวหนัง",
+                "options": [
+                  {
+                    "label": "ตาแฉะ/ขี้ตาเกรอะ",
+                    "value": "ตาแฉะ/ขี้ตาเกรอะ"
+                  },
+                  {
+                    "label": "ขนหยอง",
+                    "value": "ขนหยอง"
+                  },
+                  {
+                    "label": "ขนร่วง",
+                    "value": "ขนร่วง"
+                  },
+                  {
+                    "label": "เกิดผื่นแดง",
+                    "value": "เกิดผื่นแดง"
+                  },
+                  {
+                    "label": "ใต้ท้องมีตุ่มหนอง",
+                    "value": "ใต้ท้องมีตุ่มหนอง"
+                  },
+                  {
+                    "label": "มีจุด/ปื้นเลือดออกใต้ผิวหนัง",
+                    "value": "มีจุด/ปื้นเลือดออกใต้ผิวหนัง"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "cat_respiratory_symptoms",
+                "name": "cat_respiratory_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบทางเดินหายใจ",
+                "options": [
+                  {
+                    "label": "ไอ จาม",
+                    "value": "ไอ จาม"
+                  },
+                  {
+                    "label": "น้ำมูกไหล",
+                    "value": "น้ำมูกไหล"
+                  },
+                  {
+                    "label": "หายใจเสียงดัง",
+                    "value": "หายใจเสียงดัง"
+                  },
+                  {
+                    "label": "หายใจลำบาก",
+                    "value": "หายใจลำบาก"
+                  },
+                  {
+                    "label": "เลือดออกจมูก",
+                    "value": "เลือดออกจมูก"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "cat_reproductive_symptoms",
+                "name": "cat_reproductive_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบสืบพันธุ์",
+                "options": [
+                  {
+                    "label": "แท้งลูก",
+                    "value": "แท้งลูก"
+                  },
+                  {
+                    "label": "ลูกตายแรกคลอด",
+                    "value": "ลูกตายแรกคลอด"
+                  },
+                  {
+                    "label": "อัณฑะบวม",
+                    "value": "อัณฑะบวม"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "cat_nervous_symptoms",
+                "name": "cat_nervous_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบประสาท",
+                "options": [
+                  {
+                    "label": "เดินเซ/เดินปัด",
+                    "value": "เดินเซ/เดินปัด"
+                  },
+                  {
+                    "label": "กัด/ดุร้ายผิดปกติ",
+                    "value": "กัด/ดุร้ายผิดปกติ"
+                  },
+                  {
+                    "label": "กลืนน้ำลายลำบาก/น้ำลายฟูมปาก",
+                    "value": "กลืนน้ำลายลำบาก/น้ำลายฟูมปาก"
+                  },
+                  {
+                    "label": "หวาดระแวง/ตกใจง่าย/ไวต่อสิ่งเร้า",
+                    "value": "หวาดระแวง/ตกใจง่าย/ไวต่อสิ่งเร้า"
+                  },
+                  {
+                    "label": "ดุร้ายผิดวิสัย",
+                    "value": "ดุร้ายผิดวิสัย"
+                  },
+                  {
+                    "label": "หอนมีเสียงแหบ",
+                    "value": "หอนมีเสียงแหบ"
+                  },
+                  {
+                    "label": "ซึม",
+                    "value": "ซึม"
+                  },
+                  {
+                    "label": "ชัก",
+                    "value": "ชัก"
+                  },
+                  {
+                    "label": "ไม่กินอาหาร",
+                    "value": "ไม่กินอาหาร"
+                  },
+                  {
+                    "label": "หลบตามที่มืด",
+                    "value": "หลบตามที่มืด"
+                  },
+                  {
+                    "label": "มีคนถูกกัด/เลีย/ข่วน",
+                    "value": "มีคนถูกกัด/เลีย/ข่วน"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "cat_general_symptoms",
+                "name": "cat_general_symptoms",
+                "type": "multiplechoices",
+                "label": "อาการทั่วไป",
+                "options": [
+                  {
+                    "label": "ตายเฉียบพลัน",
+                    "value": "ตายเฉียบพลัน"
+                  },
+                  {
+                    "label": "ลุกไม่ขึ้น",
+                    "value": "ลุกไม่ขึ้น"
+                  },
+                  {
+                    "label": "ไข้สูง/ซึม/ไม่กินอาหาร",
+                    "value": "ไข้สูง/ซึม/ไม่กินอาหาร"
+                  },
+                  {
+                    "label": "ซูบผอม",
+                    "value": "ซูบผอม"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "cat_others_symptoms",
+                "name": "cat_others_symptoms",
+                "type": "text",
+                "label": "อาการอื่นๆ",
+                "required": false
+              }
+            ],
+            "condition": {
+              "name": "cat_disease",
+              "value": "ระบุอาการ",
+              "operator": "="
+            },
+            "description": "แมว"
+          },
+          {
+            "label": "อาการโรค",
+            "fields": [
+              {
+                "id": "swine_fmd",
+                "name": "swine_fmd",
+                "type": "multiplechoices",
+                "label": "โรคปากและเท้าเปื่อย",
+                "options": [
+                  {
+                    "label": "มีตุ่มใส หรือ แผลที่ปาก กีบ",
+                    "value": "มีตุ่มใส หรือ แผลที่ปาก กีบ"
+                  },
+                  {
+                    "label": "น้ำลายไหล เจ็บ",
+                    "value": "น้ำลายไหล เจ็บ"
+                  },
+                  {
+                    "label": "มีการตายในลูกสัตว์",
+                    "value": "มีการตายในลูกสัตว์"
+                  }
+                ],
+                "required": true,
+                "condition": {
+                  "name": "swine_disease",
+                  "value": "ปากและเท้าเปื่อย",
+                  "operator": "="
+                }
+              },
+              {
+                "id": "swine_flu",
+                "name": "swine_flu",
+                "type": "multiplechoices",
+                "label": "โรคหวัด",
+                "options": [
+                  {
+                    "label": "ไอ",
+                    "value": "ไอ"
+                  },
+                  {
+                    "label": "น้ำมูกไหล",
+                    "value": "น้ำมูกไหล"
+                  },
+                  {
+                    "label": "หอบ",
+                    "value": "หอบ"
+                  },
+                  {
+                    "label": "หายใจลำบาก",
+                    "value": "หายใจลำบาก"
+                  }
+                ],
+                "required": true,
+                "condition": {
+                  "name": "swine_disease",
+                  "value": "หวัด",
+                  "operator": "="
+                }
+              },
+              {
+                "id": "classical_swine_fever",
+                "name": "classical_swine_fever",
+                "type": "multiplechoices",
+                "label": "โรคอหิวาต์",
+                "options": [
+                  {
+                    "label": "อาเจียน",
+                    "value": "อาเจียน"
+                  },
+                  {
+                    "label": "ฉี่เป็นสีเลือด",
+                    "value": "ฉี่เป็นสีเลือด"
+                  },
+                  {
+                    "label": "ไข้สูง",
+                    "value": "ไข้สูง"
+                  },
+                  {
+                    "label": "มีจุด/ปื้นเลือดออกใต้ผิวหนัง",
+                    "value": "มีจุด/ปื้นเลือดออกใต้ผิวหนัง"
+                  }
+                ],
+                "required": true,
+                "condition": {
+                  "name": "swine_disease",
+                  "value": "อหิวาต์",
+                  "operator": "="
+                }
+              }
+            ],
+            "condition": {
+              "name": "swine_disease",
+              "value": "ระบุอาการ",
+              "operator": "!="
+            },
+            "description": "หมู"
+          },
+          {
+            "label": "ระบุอาการ",
+            "fields": [
+              {
+                "id": "swine_gastrointestinal_symptoms",
+                "name": "swine_gastrointestinal_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบทางเดินอาหาร",
+                "options": [
+                  {
+                    "label": "ท้องเสีย",
+                    "value": "ท้องเสีย"
+                  },
+                  {
+                    "label": "อาเจียน",
+                    "value": "อาเจียน"
+                  },
+                  {
+                    "label": "ขี้มีเลือดปน",
+                    "value": "ขี้มีเลือดปน"
+                  },
+                  {
+                    "label": "ขี้เหลวดำ",
+                    "value": "ขี้เหลวดำ"
+                  },
+                  {
+                    "label": "ขี้มีกลิ่นคาว",
+                    "value": "ขี้มีกลิ่นคาว"
+                  },
+                  {
+                    "label": "น้ำลายไหล",
+                    "value": "น้ำลายไหล"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "swine_skin_symptoms",
+                "name": "swine_skin_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบผิวหนัง",
+                "options": [
+                  {
+                    "label": "ผิวหนังเป็นสีม่วง",
+                    "value": "ผิวหนังเป็นสีม่วง"
+                  },
+                  {
+                    "label": "หนังตาบวม",
+                    "value": "หนังตาบวม"
+                  },
+                  {
+                    "label": "เกิดผื่นแดง",
+                    "value": "เกิดผื่นแดง"
+                  },
+                  {
+                    "label": "มีตุ่มใส/แผลที่ปาก หรือ กีบ หรือ เต้านม",
+                    "value": "มีตุ่มใส/แผลที่ปาก หรือ กีบ หรือ เต้านม"
+                  },
+                  {
+                    "label": "ข้อบวม",
+                    "value": "ข้อบวม"
+                  },
+                  {
+                    "label": "มีจุด/ปื้นเลือดออกใต้ผิวหนัง",
+                    "value": "มีจุด/ปื้นเลือดออกใต้ผิวหนัง"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "swine_respiratory_symptoms",
+                "name": "swine_respiratory_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบทางเดินหายใจ",
+                "options": [
+                  {
+                    "label": "ไอ จาม",
+                    "value": "ไอ จาม"
+                  },
+                  {
+                    "label": "น้ำมูกไหล",
+                    "value": "น้ำมูกไหล"
+                  },
+                  {
+                    "label": "หายใจเสียงดัง",
+                    "value": "หายใจเสียงดัง"
+                  },
+                  {
+                    "label": "หายใจลำบาก",
+                    "value": "หายใจลำบาก"
+                  },
+                  {
+                    "label": "เลือดออกจมูก",
+                    "value": "เลือดออกจมูก"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "swine_reproductive_symptoms",
+                "name": "swine_reproductive_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบสืบพันธุ์",
+                "options": [
+                  {
+                    "label": "แท้งติดต่อ",
+                    "value": "แท้งติดต่อ"
+                  },
+                  {
+                    "label": "ลูกตายแรกคลอด",
+                    "value": "ลูกตายแรกคลอด"
+                  },
+                  {
+                    "label": "ผสมติดยาก",
+                    "value": "ผสมติดยาก"
+                  },
+                  {
+                    "label": "อัณฑะบวม",
+                    "value": "อัณฑะบวม"
+                  },
+                  {
+                    "label": "ฉี่เป็นสีเลือด",
+                    "value": "ฉี่เป็นสีเลือด"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "swine_nervous_symptoms",
+                "name": "swine_nervous_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบประสาท",
+                "options": [
+                  {
+                    "label": "เดินเซ",
+                    "value": "เดินเซ"
+                  },
+                  {
+                    "label": "ขาเกร็ง",
+                    "value": "ขาเกร็ง"
+                  },
+                  {
+                    "label": "ชัก",
+                    "value": "ชัก"
+                  },
+                  {
+                    "label": "น้ำลายฟูมปาก",
+                    "value": "น้ำลายฟูมปาก"
+                  },
+                  {
+                    "label": "อัมพาต",
+                    "value": "อัมพาต"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "swine_general_symptoms",
+                "name": "swine_general_symptoms",
+                "type": "multiplechoices",
+                "label": "อาการทั่วไป",
+                "options": [
+                  {
+                    "label": "ตายเฉียบพลัน",
+                    "value": "ตายเฉียบพลัน"
+                  },
+                  {
+                    "label": "ลุกไม่ขึ้น",
+                    "value": "ลุกไม่ขึ้น"
+                  },
+                  {
+                    "label": "ไข้สูง/ซึม/ไม่กินอาหาร",
+                    "value": "ไข้สูง/ซึม/ไม่กินอาหาร"
+                  },
+                  {
+                    "label": "ตาแดง",
+                    "value": "ตาแดง"
+                  },
+                  {
+                    "label": "ซูบผอม",
+                    "value": "ซูบผอม"
+                  },
+                  {
+                    "label": "แคระแกร็น",
+                    "value": "แคระแกร็น"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "swine_carcass",
+                "name": "swine_carcass",
+                "type": "multiplechoices",
+                "label": "ความผิดปกติในซาก",
+                "options": [
+                  {
+                    "label": "เลือดไม่แข็งตัว",
+                    "value": "เลือดไม่แข็งตัว"
+                  },
+                  {
+                    "label": "มีจุดเลือดออกในอวัยวะภายใน",
+                    "value": "มีจุดเลือดออกในอวัยวะภายใน"
+                  },
+                  {
+                    "label": "มีก้อนหนองกระจายทั่วไป",
+                    "value": "มีก้อนหนองกระจายทั่วไป"
+                  },
+                  {
+                    "label": "ตับโต ม้ามโต",
+                    "value": "ตับโต ม้ามโต"
+                  },
+                  {
+                    "label": "ฉี่ในกระเพาะปัสสาวะเป็นสีแดง",
+                    "value": "ฉี่ในกระเพาะปัสสาวะเป็นสีแดง"
+                  },
+                  {
+                    "label": "ซากซีด/เหลือง",
+                    "value": "ซากซีด/เหลือง"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "swine_others_symptoms",
+                "name": "swine_others_symptoms",
+                "type": "text",
+                "label": "อาการอื่นๆ",
+                "required": false
+              }
+            ],
+            "condition": {
+              "name": "swine_disease",
+              "value": "ระบุอาการ",
+              "operator": "="
+            },
+            "description": "หมู"
+          },
+          {
+            "label": "อาการโรค",
+            "fields": [
+              {
+                "id": "anthrax_symptoms",
+                "name": "anthrax_symptoms",
+                "type": "multiplechoices",
+                "label": "โรคกาลี/แอนแทรกซ์",
+                "options": [
+                  {
+                    "label": "ตายเฉียบพลัน",
+                    "value": "ตายเฉียบพลัน"
+                  },
+                  {
+                    "label": "เลือดดำไหลออกทวาร",
+                    "value": "เลือดดำไหลออกทวาร"
+                  }
+                ],
+                "required": true,
+                "condition": {
+                  "name": "ruminant_disease",
+                  "value": "กาลี/แอนแทรกซ์",
+                  "operator": "="
+                }
+              },
+              {
+                "id": "ruminant_fmd",
+                "name": "ruminant_fmd",
+                "type": "multiplechoices",
+                "label": "โรคปากและเท้าเปื่อย",
+                "options": [
+                  {
+                    "label": "มีตุ่มใส หรือ แผล ที่ปาก กีบ",
+                    "value": "มีตุ่มใส หรือ แผล ที่ปาก กีบ"
+                  },
+                  {
+                    "label": "น้ำลายไหล เจ็บ",
+                    "value": "น้ำลายไหล เจ็บ"
+                  }
+                ],
+                "required": true,
+                "condition": {
+                  "name": "ruminant_disease",
+                  "value": "ปากและเท้าเปื่อย",
+                  "operator": "="
+                }
+              },
+              {
+                "id": "black_leg_fever",
+                "name": "black_leg_fever",
+                "type": "multiplechoices",
+                "label": "โรคไข้ขาดำ",
+                "options": [
+                  {
+                    "label": "ไข้สูง",
+                    "value": "ไข้สูง"
+                  },
+                  {
+                    "label": "ขาเจ็บ",
+                    "value": "ขาเจ็บ"
+                  },
+                  {
+                    "label": "คลำดูใต้ผิวหนังรู้สึกกรอบแกรบ",
+                    "value": "คลำดูใต้ผิวหนังรู้สึกกรอบแกรบ"
+                  }
+                ],
+                "required": true,
+                "condition": {
+                  "name": "ruminant_disease",
+                  "value": "ไข้ขาดำ",
+                  "operator": "="
+                }
+              },
+              {
+                "id": "ruminant_tb",
+                "name": "ruminant_tb",
+                "type": "multiplechoices",
+                "label": "โรควัณโรค",
+                "options": [
+                  {
+                    "label": "ผอม",
+                    "value": "ผอม"
+                  },
+                  {
+                    "label": "ไอเรื้อรัง",
+                    "value": "ไอเรื้อรัง"
+                  },
+                  {
+                    "label": "เมื่อตาย พบมีตุ่มหนองในซาก",
+                    "value": "เมื่อตาย พบมีตุ่มหนองในซาก"
+                  }
+                ],
+                "required": true,
+                "condition": {
+                  "name": "ruminant_disease",
+                  "value": "วัณโรค",
+                  "operator": "="
+                }
+              },
+              {
+                "id": "haemorrhagic_septicemia",
+                "name": "haemorrhagic_septicemia",
+                "type": "multiplechoices",
+                "label": "โรคคอบวม",
+                "options": [
+                  {
+                    "label": "หน้าบวม",
+                    "value": "หน้าบวม"
+                  },
+                  {
+                    "label": "คอบวม",
+                    "value": "คอบวม"
+                  },
+                  {
+                    "label": "หายใจลำบาก",
+                    "value": "หายใจลำบาก"
+                  },
+                  {
+                    "label": "น้ำมูกเหนียวข้น",
+                    "value": "น้ำมูกเหนียวข้น"
+                  }
+                ],
+                "required": true,
+                "condition": {
+                  "name": "ruminant_disease",
+                  "value": "คอบวม",
+                  "operator": "="
+                }
+              }
+            ],
+            "condition": {
+              "name": "ruminant_disease",
+              "value": "ระบุอาการ",
+              "operator": "!="
+            },
+            "description": "โค ควาย แพะ แกะ"
+          },
+          {
+            "label": "ระบุอาการ",
+            "fields": [
+              {
+                "id": "ruminant_gastrointestinal_symptoms",
+                "name": "ruminant_gastrointestinal_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบทางเดินอาหาร",
+                "options": [
+                  {
+                    "label": "ท้องเสีย",
+                    "value": "ท้องเสีย"
+                  },
+                  {
+                    "label": "ท้องอืด",
+                    "value": "ท้องอืด"
+                  },
+                  {
+                    "label": "ขี้เหลว",
+                    "value": "ขี้เหลว"
+                  },
+                  {
+                    "label": "ขี้มีมูกเลือด",
+                    "value": "ขี้มีมูกเลือด"
+                  },
+                  {
+                    "label": "ขี้ขาว",
+                    "value": "ขี้ขาว"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "ruminant_skin_symptoms",
+                "name": "ruminant_skin_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบผิวหนัง",
+                "options": [
+                  {
+                    "label": "ผิวหนังหยาบกร้าน/ขนหยอง",
+                    "value": "ผิวหนังหยาบกร้าน/ขนหยอง"
+                  },
+                  {
+                    "label": "มีตุ่มน้ำใส/แผล ที่ปาก หรือ กีบ หรือ เต้านม",
+                    "value": "มีตุ่มน้ำใส/แผล ที่ปาก หรือ กีบ หรือ เต้านม"
+                  },
+                  {
+                    "label": "คอบวม/หน้าบวม",
+                    "value": "คอบวม/หน้าบวม"
+                  },
+                  {
+                    "label": "เยื่อเมือกซีด",
+                    "value": "เยื่อเมือกซีด"
+                  },
+                  {
+                    "label": "ผิวหรือเยื่อเมือกที่ตา หรือ ปาก มีสีเหลือง",
+                    "value": "ผิวหรือเยื่อเมือกที่ตา หรือ ปาก มีสีเหลือง"
+                  },
+                  {
+                    "label": "ต่อมน้ำเหลืองบวม",
+                    "value": "ต่อมน้ำเหลืองบวม"
+                  },
+                  {
+                    "label": "มีจุด/ปื้นเลือดออกใต้ผิวหนัง",
+                    "value": "มีจุด/ปื้นเลือดออกใต้ผิวหนัง"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "ruminant_respiratory_symptoms",
+                "name": "ruminant_respiratory_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบทางเดินหายใจ",
+                "options": [
+                  {
+                    "label": "ไอ จาม",
+                    "value": "ไอ จาม"
+                  },
+                  {
+                    "label": "น้ำมูกไหล",
+                    "value": "น้ำมูกไหล"
+                  },
+                  {
+                    "label": "หายใจเสียงดัง",
+                    "value": "หายใจเสียงดัง"
+                  },
+                  {
+                    "label": "หายใจลำบาก",
+                    "value": "หายใจลำบาก"
+                  },
+                  {
+                    "label": "หอบ",
+                    "value": "หอบ"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "ruminant_reproductive_symptoms",
+                "name": "ruminant_reproductive_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบสืบพันธุ์",
+                "options": [
+                  {
+                    "label": "แท้งติดต่อ",
+                    "value": "แท้งติดต่อ"
+                  },
+                  {
+                    "label": "ผสมติดยาก",
+                    "value": "ผสมติดยาก"
+                  },
+                  {
+                    "label": "อัณฑะบวม",
+                    "value": "อัณฑะบวม"
+                  },
+                  {
+                    "label": "ฉี่เป็นสีเลือด",
+                    "value": "ฉี่เป็นสีเลือด"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "ruminant_nervous_symptoms",
+                "name": "ruminant_nervous_symptoms",
+                "type": "multiplechoices",
+                "label": "ระบบประสาท",
+                "options": [
+                  {
+                    "label": "เดินเซ",
+                    "value": "เดินเซ"
+                  },
+                  {
+                    "label": "ขาเกร็ง",
+                    "value": "ขาเกร็ง"
+                  },
+                  {
+                    "label": "ชัก",
+                    "value": "ชัก"
+                  },
+                  {
+                    "label": "ไวต่อสิ่งเร้า เช่น ตื่นแสง , ตื่นเสียง",
+                    "value": "ไวต่อสิ่งเร้า เช่น ตื่นแสง , ตื่นเสียง"
+                  },
+                  {
+                    "label": "เสียการทรงตัว",
+                    "value": "เสียการทรงตัว"
+                  },
+                  {
+                    "label": "อัมพาต",
+                    "value": "อัมพาต"
+                  },
+                  {
+                    "label": "กระแตเวียน/เดินวน",
+                    "value": "กระแตเวียน/เดินวน"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "ruminant_general_symptoms",
+                "name": "ruminant_general_symptoms",
+                "type": "multiplechoices",
+                "label": "อาการทั่วไป",
+                "options": [
+                  {
+                    "label": "ตายเฉียบพลัน",
+                    "value": "ตายเฉียบพลัน"
+                  },
+                  {
+                    "label": "ลุกไม่ขึ้น",
+                    "value": "ลุกไม่ขึ้น"
+                  },
+                  {
+                    "label": "ไข้สูง/ซึม/ไม่กินอาหาร",
+                    "value": "ไข้สูง/ซึม/ไม่กินอาหาร"
+                  },
+                  {
+                    "label": "ซูบผอม",
+                    "value": "ซูบผอม"
+                  },
+                  {
+                    "label": "แคระแกร็น",
+                    "value": "แคระแกร็น"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "ruminant_carcasses",
+                "name": "ruminant_carcasses",
+                "type": "multiplechoices",
+                "label": "ความผิดปกติในซาก",
+                "options": [
+                  {
+                    "label": "เลือดไม่แข็งตัว",
+                    "value": "เลือดไม่แข็งตัว"
+                  },
+                  {
+                    "label": "มีจุดเลือดออกในอวัยวะภายใน",
+                    "value": "มีจุดเลือดออกในอวัยวะภายใน"
+                  },
+                  {
+                    "label": "มีก้อนหนองกระจายทั่วไป",
+                    "value": "มีก้อนหนองกระจายทั่วไป"
+                  },
+                  {
+                    "label": "ตับโต ม้ามโต",
+                    "value": "ตับโต ม้ามโต"
+                  },
+                  {
+                    "label": "ฉี่ในกระเพาะปัสสาวะเป็นสีแดง",
+                    "value": "ฉี่ในกระเพาะปัสสาวะเป็นสีแดง"
+                  },
+                  {
+                    "label": "ซากซีด/เหลือง",
+                    "value": "ซากซีด/เหลือง"
+                  }
+                ],
+                "required": false
+              },
+              {
+                "id": "ruminant_others_sypmtoms",
+                "name": "ruminant_others_sypmtoms",
+                "type": "text",
+                "label": "อาการอื่นๆ",
+                "required": false
+              }
+            ],
+            "condition": {
+              "name": "ruminant_disease",
+              "value": "ระบุอาการ",
+              "operator": "="
+            },
+            "description": "โค ควาย แพะ แกะ"
+          }
+        ]
+      },
+      {
+        "label": "ภาพและสถานที่",
+        "questions": [
+          {
+            "label": "ภาพถ่ายสัตว์ป่วย/ตาย",
+            "fields": [
+              {
+                "id": "images_animal",
+                "name": "images_animal",
+                "type": "images",
+                "label": "",
+                "required": false
+              }
+            ],
+            "description": ""
+          },
+          {
+            "label": "สถานที่ที่พบ",
+            "fields": [
+              {
+                "id": "location_gps",
+                "name": "location_gps",
+                "type": "location",
+                "label": "",
+                "required": false
+              }
+            ],
+            "description": ""
+          }
+        ]
+      }
+    ]
+  },
+  "categoryName": "สุขภาพสัตว์",
+  "stateDefinitionName": "default case status",
+  "ordering": 1,
+  "rendererDataTemplate": "รายงานสัตว์ป่วย/ตาย : พบ {% for k, v in data.items %}  {% if k in 'poultry_type,carnivora_type,ruminant_swine_type' and v %}    {{ v }}      {% endif %} {% if k in 'poultry_disease,dog_disease,cat_disease,ruminant_disease,swine_disease' and v  %}    {% if v == 'ระบุอาการ' %}     ระบุอาการป่วย/ตายคือ       {% for k, v in data.items %}        {% if 'symptoms__value' in k and v  %}          {{ v }}        {% endif %}      {% endfor %}  {% else %}      ระบุโรคป่วย/ตายคือ {{ v }}    {% endif %}      {% endif %} {% endfor %} มีจำนวนป่วย {{data.no_of_illness}} ตัว ตายในเล้า/คอก {{data.no_of_death}} ตัว จากทั้งหมด {{data.total_of_animal}} ตัว และเล้าใกล้เคียงที่มีอาการ จำนวน {{ data.no_of_nearby__value }} ครัวเรือน",
+  "followupDefinition": {
+    "sections": [
+      {
+        "label": "จำนวน",
+        "questions": [
+          {
+            "label": "จำนวนสัตว์ป่วย",
+            "fields": [
+              {
+                "id": "no_of_illness_follow",
+                "name": "no_of_illness_follow",
+                "type": "integer",
+                "label": "",
+                "required": false
+              }
+            ],
+            "description": ""
+          },
+          {
+            "label": "จำนวนสัตว์ตายในเล้า/คอก",
+            "fields": [
+              {
+                "id": "no_of_death_follow",
+                "name": "no_of_death_follow",
+                "type": "integer",
+                "label": "",
+                "required": false
+              }
+            ],
+            "description": ""
+          },
+          {
+            "label": "จำนวนสัตว์ทั้งหมด",
+            "fields": [
+              {
+                "id": "total_of_animal_follow",
+                "name": "total_of_animal_follow",
+                "type": "integer",
+                "label": "",
+                "required": false
+              }
+            ],
+            "description": ""
+          },
+          {
+            "label": "จำนวนเล้าใกล้เคียงที่มีอาการ",
+            "fields": [
+              {
+                "id": "no_of_nearby_follow",
+                "name": "no_of_nearby_follow",
+                "type": "integer",
+                "label": "",
+                "required": false
+              }
+            ],
+            "description": ""
+          }
+        ]
+      },
+      {
+        "label": "ภาพถ่ายและหมายเหตุ",
+        "questions": [
+          {
+            "label": "images",
+            "fields": [
+              {
+                "id": "images_follow",
+                "name": "images_follow",
+                "type": "images",
+                "label": "",
+                "required": false
+              }
+            ],
+            "description": ""
+          },
+          {
+            "label": "remark",
+            "fields": [
+              {
+                "id": "remark_follow",
+                "name": "remark_follow",
+                "type": "text",
+                "label": "",
+                "required": false
+              }
+            ],
+            "description": ""
+          }
+        ]
+      }
+    ]
+  },
+  "rendererFollowupDataTemplate": "ผลการติดตามการรายงานสัตว์ป่วย/ตาย : มีจำนวนป่วย {{ data.no_of_illness_follow__value }} ตัว ตายในเล้า/คอก {{ data.no_of_death_follow__value }} ตัว จากทั้งหมด {{ data.total_of_animal_follow__value }} ตัว และเล้าใกล้เคียงที่มีอาการ จำนวน {{ data.no_of_nearby_follow__value }} ครัวเรือน"
+}

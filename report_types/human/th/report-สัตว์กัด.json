@@ -1,0 +1,342 @@
+{
+  "id": "6109b43c-9f78-46f7-a773-5038f00e74f0",
+  "name": "สัตว์กัด",
+  "definition": {
+    "sections": [
+      {
+        "label": "Page 1",
+        "questions": [
+          {
+            "label": "อายุผู้ถูกกัด",
+            "fields": [
+              {
+                "id": "sickness_age",
+                "name": "sickness_age",
+                "type": "integer",
+                "label": "",
+                "required": false
+              }
+            ],
+            "description": ""
+          },
+          {
+            "label": "เพศผู้ถูกกัด",
+            "fields": [
+              {
+                "id": "sickness_gender",
+                "name": "sickness_gender",
+                "type": "singlechoices",
+                "label": "",
+                "options": [
+                  {
+                    "label": "ชาย",
+                    "value": "ชาย"
+                  },
+                  {
+                    "label": "หญิง",
+                    "value": "หญิง"
+                  }
+                ],
+                "required": true
+              }
+            ],
+            "description": ""
+          },
+          {
+            "label": "ประเภทสัตว์ที่กัด",
+            "fields": [
+              {
+                "id": "animal_type",
+                "name": "animal_type",
+                "type": "singlechoices",
+                "label": "",
+                "options": [
+                  {
+                    "label": "สุนัข",
+                    "value": "สุนัข"
+                  },
+                  {
+                    "label": "แมว",
+                    "value": "แมว"
+                  },
+                  {
+                    "label": "อื่นๆ (ระบุ)",
+                    "value": "อื่นๆ (ระบุ)",
+                    "textInput": true
+                  }
+                ],
+                "required": true
+              }
+            ],
+            "description": ""
+          }
+        ]
+      },
+      {
+        "label": "Page 2",
+        "questions": [
+          {
+            "label": "บริเวณที่ถูกกัด",
+            "fields": [
+              {
+                "id": "organ_bited",
+                "name": "organ_bited",
+                "type": "multiplechoices",
+                "label": "",
+                "options": [
+                  {
+                    "label": "หัว หน้า ใบหู ลำคอ",
+                    "value": "หัว หน้า ใบหู ลำคอ"
+                  },
+                  {
+                    "label": "ลำตัว อก ท้อง",
+                    "value": "ลำตัว อก ท้อง"
+                  },
+                  {
+                    "label": "แขน",
+                    "value": "แขน"
+                  },
+                  {
+                    "label": "มือ",
+                    "value": "มือ"
+                  },
+                  {
+                    "label": "ขา",
+                    "value": "ขา"
+                  },
+                  {
+                    "label": "เท้า",
+                    "value": "เท้า"
+                  }
+                ],
+                "required": true
+              }
+            ],
+            "description": ""
+          },
+          {
+            "label": "ลักษณะบาดแผล",
+            "fields": [
+              {
+                "id": "wound_type",
+                "name": "wound_type",
+                "type": "multiplechoices",
+                "label": "",
+                "options": [
+                  {
+                    "label": "มีเลือดออก",
+                    "value": "มีเลือดออก"
+                  },
+                  {
+                    "label": "ไม่มีเลือดออก",
+                    "value": "ไม่มีเลือดออก"
+                  },
+                  {
+                    "label": "ไม่ทราบ/ไม่แน่ใจ",
+                    "value": "ไม่ทราบ/ไม่แน่ใจ"
+                  }
+                ],
+                "required": true
+              }
+            ],
+            "description": ""
+          },
+          {
+            "label": "สัตว์ที่กัดมีเจ้าของหรือไม่",
+            "fields": [
+              {
+                "id": "animal_owner",
+                "name": "animal_owner",
+                "type": "singlechoices",
+                "label": "",
+                "options": [
+                  {
+                    "label": "เป็นสัตว์มีเจ้าของ",
+                    "value": "เป็นสัตว์มีเจ้าของ"
+                  },
+                  {
+                    "label": "เป็นสัตว์ไม่มีเจ้าของ",
+                    "value": "ืเป็นสัตว์ไม่มีเจ้าของ"
+                  },
+                  {
+                    "label": "ไม่ทราบประวัติ",
+                    "value": "ไม่ทราบประวัติ"
+                  }
+                ],
+                "required": true
+              }
+            ],
+            "description": ""
+          }
+        ]
+      },
+      {
+        "label": "Page 3",
+        "questions": [
+          {
+            "label": "สัตว์ที่กัดเคยฉีดวัคซีนป้องกันโรคพิษสุนัขบ้าหรือไม่ (ในระยะเวลา 1 ปีที่ผ่านมา)",
+            "fields": [
+              {
+                "id": "rabies_vaccine",
+                "name": "rabies_vaccine",
+                "type": "singlechoices",
+                "label": "",
+                "options": [
+                  {
+                    "label": "เคยฉีดวัคซีน",
+                    "value": "เคยฉีดวัคซีน"
+                  },
+                  {
+                    "label": "ไม่เคยฉีดวัคซีน",
+                    "value": "ไม่เคยฉีดวัคซีน"
+                  },
+                  {
+                    "label": "ไม่ทราบ/ไม่แน่ใจ",
+                    "value": "ไม่ทราบ/ไม่แน่ใจ"
+                  }
+                ],
+                "required": true
+              }
+            ],
+            "description": ""
+          },
+          {
+            "label": "สาเหตุที่ถูกกัด",
+            "fields": [
+              {
+                "id": "bited_cause",
+                "name": "bited_cause",
+                "type": "multiplechoices",
+                "label": "",
+                "options": [
+                  {
+                    "label": "ไม่มี หรือ ไม่ทราบสาเหตุ",
+                    "value": "ไม่ทราบ"
+                  },
+                  {
+                    "label": "ทำให้สัตว์เจ็บ ตกใจ กลัว",
+                    "value": "ทำให้สัตว์เจ็บ ตกใจ กลัว"
+                  },
+                  {
+                    "label": "เข้าไปช่วยเหลือหรือจับลูกอ่อน",
+                    "value": "เข้าไปช่วยเหลือหรือจับลูกอ่อน"
+                  },
+                  {
+                    "label": "เข้าไปแยกสัตว์ที่กัดกัน",
+                    "value": "เข้าไปแยกสัตว์ที่กัดกัน"
+                  },
+                  {
+                    "label": "เข้าไปกวนตอนกินข้าว",
+                    "value": "เข้าไปในบริเวณที่สัตว์อาศัย"
+                  },
+                  {
+                    "label": "เข้าไปในบริเวณที่สัตว์เป็นเจ้าของ",
+                    "value": "อื่นๆ (ระบุ)"
+                  },
+                  {
+                    "label": "อื่นๆ",
+                    "value": "อื่นๆ",
+                    "textInput": true
+                  }
+                ],
+                "required": true
+              }
+            ],
+            "description": ""
+          },
+          {
+            "label": "สัตว์ที่กัดยังมีชีวิตอยู่หรือไม่",
+            "fields": [
+              {
+                "id": "alive_bite_animal",
+                "name": "alive_bite_animal",
+                "type": "singlechoices",
+                "label": "",
+                "options": [
+                  {
+                    "label": "ยังมีชีวิตอยู่",
+                    "value": "ยังมีชีวิตอยู่"
+                  },
+                  {
+                    "label": "ตายแล้ว",
+                    "value": "ตายแล้ว"
+                  },
+                  {
+                    "label": "ไม่สามารถหาสัตว์ที่กัดได้",
+                    "value": "ไม่สามารถหาสัตว์ที่กัดได้"
+                  },
+                  {
+                    "label": "มีชีวิตอยู่ แต่แสดงอาการโรคพิษสุนัขบ้า",
+                    "value": "มีชีวิตอยู่ แต่แสดงอาการโรคพิษสุนัขบ้า"
+                  }
+                ],
+                "required": true
+              },
+              {
+                "id": "show_rabies_symptoms",
+                "name": "show_rabies_symptoms",
+                "type": "multiplechoices",
+                "label": "อาการพิษสุนัขบ้า",
+                "options": [
+                  {
+                    "label": "กัด ดุร้าย",
+                    "value": "กัด ดุร้าย"
+                  },
+                  {
+                    "label": "กลืนไม่ได้",
+                    "value": "กลืนไม่ได้"
+                  },
+                  {
+                    "label": "เสียการทรงตัว",
+                    "value": "เสียการทรงตัว"
+                  }
+                ],
+                "required": true,
+                "condition": {
+                  "name": "alive_bite_animal",
+                  "value": "มีชีวิตอยู่ แต่แสดงอาการโรคพิษสุนัขบ้า",
+                  "operator": "="
+                }
+              }
+            ],
+            "description": ""
+          },
+          {
+            "label": "รายละเอียดเพิ่มเติม",
+            "fields": [
+              {
+                "id": "description",
+                "name": "description",
+                "type": "text",
+                "label": "",
+                "required": true
+              }
+            ],
+            "description": ""
+          },
+          {
+            "label": "ภาพถ่ายสัตว์ที่กัด/แผลที่ถูกกัด",
+            "fields": [
+              {
+                "id": "images",
+                "name": "images",
+                "type": "images",
+                "label": "",
+                "required": false
+              }
+            ],
+            "description": ""
+          }
+        ]
+      }
+    ]
+  },
+  "categoryName": "สุขภาพคน",
+  "stateDefinitionName": "default case status",
+  "ordering": 3,
+  "rendererDataTemplate": "รายงานสัตว์กัด : คนอายุ {{ data.sickness_age__value }} ปี เพศ{{ data.sickness_gender__value }} ถูก{{ data.animal_type__value }}กัด สัตว์ที่กัด{{ data.animal_owner__value }} ประวัติการฉีดวัคซีนโรคพิษสุนัขบ้าในระยะเวลา 1 ปีที่ผ่านมา{{ data.rabies_vaccine__value }}   ปัจจุบันสัตว์ที่กัด{{ data.alive_bite_animal__value }}",
+  "followupDefinition": {
+    "sections": []
+  },
+  "rendererFollowupDataTemplate": ""
+}
